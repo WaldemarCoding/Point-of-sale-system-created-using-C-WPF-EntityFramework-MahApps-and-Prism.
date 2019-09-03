@@ -4,64 +4,66 @@ using Prism.Commands;
 
 namespace PoS.ViewModels
 {
-	public class UserInfoFlyoutViewModel : ViewModelBase
-	{
-		private User _userModel;
-		private bool _isOpen;
+    public class UserInfoFlyoutViewModel : ViewModelBase
+    {
+        private User _userModel;
+        private bool _isOpen;
 
-		public bool IsOpenFlyout
-		{
-			get
-			{
-				return _isOpen;
-			}
-			set
-			{
-				if (_isOpen != value) {
-					_isOpen = value;
-					NotifyPropertyChanged ("IsOpenFlyout");
-				}
-			}
-		}
+        public bool IsOpenFlyout
+        {
+            get
+            {
+                return _isOpen;
+            }
+            set
+            {
+                if (_isOpen != value)
+                {
+                    _isOpen = value;
+                    NotifyPropertyChanged("IsOpenFlyout");
+                }
+            }
+        }
 
-		private string _fullName;
-		public string FullName
-		{
-			get
-			{
-				return _fullName;
-			}
-			set
-			{
-				if (_fullName != value) {
-					_fullName = value;
-					NotifyPropertyChanged ("FullName");
-				}
-			}
-		}
+        private string _fullName;
+        public string FullName
+        {
+            get
+            {
+                return _fullName;
+            }
+            set
+            {
+                if (_fullName != value)
+                {
+                    _fullName = value;
+                    NotifyPropertyChanged("FullName");
+                }
+            }
+        }
 
-		public DelegateCommand LogoutCommand
-		{
-			get;
-			private set;
-		}
+        public DelegateCommand LogoutCommand
+        {
+            get;
+            private set;
+        }
 
-		public UserInfoFlyoutViewModel ()
-		{
-			EventAggregator.GetEvent<UserLoginEvent> ().Subscribe (LoginUser);
-			LogoutCommand = new DelegateCommand (Logout);
-		}
+        public UserInfoFlyoutViewModel()
+        {
+            EventAggregator.GetEvent<UserLoginEvent>().Subscribe(LoginUser);
+            LogoutCommand = new DelegateCommand(Logout);
+        }
 
-		private void Logout ()
-		{
-			IsOpenFlyout = false;
-			EventAggregator.GetEvent<UserLogoutEvent> ().Publish ();
-		}
+        private void Logout()
+        {
+            IsOpenFlyout = false;
+            EventAggregator.GetEvent<UserLogoutEvent>().Publish();
+        }
 
-		private void LoginUser (User iUser)
-		{
-			_userModel = iUser;
-			FullName = string.Format ("{0}, {1}", iUser.LName, iUser.FName);
-		}
-	}
+        private void LoginUser(User iUser)
+        {
+            _userModel = iUser;
+            FullName = string.Format("{0}, {1}", iUser.LName, iUser.FName);
+        }
+    }
 }

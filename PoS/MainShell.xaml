@@ -1,27 +1,33 @@
-﻿<mah:MetroWindow x:Class="PoS.MainShell"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PoS"
-        xmlns:prism="http://prismlibrary.com/"
-        GlowBrush="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
-        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
-        mc:Ignorable="d"
-        Title="PoS" SizeToContent="WidthAndHeight" >
-    <!-- RightWindow Commands -->
+﻿<mah:MetroWindow
+    x:Class="PoS.MainShell"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="PoS"
+    GlowBrush="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+    SizeToContent="WidthAndHeight"
+    mc:Ignorable="d">
+    <!--  RightWindow Commands  -->
     <mah:MetroWindow.RightWindowCommands>
         <mah:WindowCommands x:Name="RightCommandRegion" prism:RegionManager.RegionName="RightCommandRegion" />
     </mah:MetroWindow.RightWindowCommands>
-    <!-- LeftWindow Commands -->
+    <!--  LeftWindow Commands  -->
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands x:Name="LeftCommandRegion" prism:RegionManager.RegionName="LeftCommandRegion" />
     </mah:MetroWindow.LeftWindowCommands>
-    <!-- Flyouts -->
+    <!--  Flyouts  -->
     <mah:MetroWindow.Flyouts>
         <mah:FlyoutsControl x:Name="FlyoutControlRegion" prism:RegionManager.RegionName="FlyoutControlRegion" />
     </mah:MetroWindow.Flyouts>
     <Grid>
-        <Frame HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="frameMainRegion" NavigationUIVisibility="Hidden" prism:RegionManager.RegionName="MainRegion" />
+        <Frame
+            x:Name="frameMainRegion"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            prism:RegionManager.RegionName="MainRegion"
+            NavigationUIVisibility="Hidden" />
     </Grid>
 </mah:MetroWindow>

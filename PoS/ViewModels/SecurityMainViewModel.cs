@@ -1,6 +1,6 @@
 ﻿namespace PoS.ViewModels
 {
-	public class SecurityMainViewModel: ViewModelBase
-	{
-	}
+    public class SecurityMainViewModel : ViewModelBase
+    {
+    }
 }

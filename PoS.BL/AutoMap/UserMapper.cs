@@ -5,10 +5,5 @@ namespace PoS.BL.AutoMap
 {
 	public class UserMapper : BaseMapper<User, UserModel, UserModel>
 	{
-		public UserMapper()
-			:base()
-		{
-
-		}
-	}
+    }
 }

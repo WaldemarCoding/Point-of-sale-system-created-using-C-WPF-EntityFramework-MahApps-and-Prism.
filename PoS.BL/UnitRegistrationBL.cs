@@ -1,16 +1,17 @@
 ﻿using PoS.BL.Service;
 using PoS.BL.Service.Internal;
 using PoS.Dal.Sql.Ctx;
+using Prism.Ioc;
 
 namespace PoS.BL
 {
 	public class UnitRegistrationBL
 	{
-		public static void Setup(IUnityContainer container)
+		public static void Setup(IContainerRegistry container)
 		{
 			UnityRegistrationDbCtx.Setup(container);
-			container.RegisterType<ISecurityService, SecurityService>();
-			container.RegisterType<IInventoryService, InventoryService>();
+			container.Register<ISecurityService, SecurityService>();
+			container.Register<IInventoryService, InventoryService>();
 		}
 	}
 }

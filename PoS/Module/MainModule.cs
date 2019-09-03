@@ -1,26 +1,24 @@
 ﻿using PoS.Views;
+using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
 
 namespace PoS.Module
 {
-	public class MainModule : IModule
-	{
-		private IUnityContainer _container;
-		private IRegionManager _regionManager;
+    public class MainModule : IModule
+    {
+        public void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            containerRegistry.RegisterForNavigation<HomeTilesView>();
+            containerRegistry.RegisterForNavigation<InventoryMainView>();
+            containerRegistry.RegisterForNavigation<SecurityMainView>();
 
-		public MainModule (IUnityContainer unityContainer, IRegionManager regionManager)
-		{
-			_container = unityContainer;
-			_regionManager = regionManager;
-		}
-		public void Initialize ()
-		{
-			_container.RegisterTypeForNavigation<HomeTilesView> ("HomeTilesView");
-			_container.RegisterTypeForNavigation<InventoryMainView> ("InventoryMainView");
-			_container.RegisterTypeForNavigation<SecurityMainView> ("SecurityMainView");
+        }
 
-			_regionManager.RequestNavigate ("MainRegion", "HomeTilesView");
-		}
-	}
+        public void OnInitialized(IContainerProvider containerProvider)
+        {
+            var regionManager = containerProvider.Resolve<IRegionManager>();
+            regionManager.RequestNavigate("MainRegion", nameof(HomeTilesView));
+        }
+    }
 }
