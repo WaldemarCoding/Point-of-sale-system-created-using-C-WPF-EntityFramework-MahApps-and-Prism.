@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PoS.BL.Service.Base
+﻿namespace PoS.BL.Service.Base
 {
 	public interface IBaseService
 	{

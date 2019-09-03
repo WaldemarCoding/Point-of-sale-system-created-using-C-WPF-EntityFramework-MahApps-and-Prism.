@@ -1,17 +1,10 @@
-﻿using Microsoft.Practices.Unity;
-using PoS.BL;
-using PoS.BL.Service;
+﻿using PoS.BL;
 using PoS.Module;
 using PoS.Views;
 using Prism.Modularity;
 using Prism.Regions;
 using Prism.Unity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace PoS

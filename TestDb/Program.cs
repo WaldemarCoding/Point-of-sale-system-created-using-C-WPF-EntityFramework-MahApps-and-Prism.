@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using PoS.Dal.Mdl;
+﻿using System.Linq;
 using PoS.Dal.Sql.Ctx;
-using PoS.Dal.Sql.Ctx.Repository;
 
 namespace TestDb
 {

@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using PoS.Dal.Sql.Ctx.Repository;
-using PoS.Dal.Sql.Ctx.Context;
 
 namespace PoS.Dal.Sql.Ctx.Transaction
 {

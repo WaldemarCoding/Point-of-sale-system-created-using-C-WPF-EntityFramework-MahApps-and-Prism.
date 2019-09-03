@@ -1,11 +1,8 @@
 ﻿using PoS.BL.Service.Base;
 using PoS.Dal.Mdl;
 using PoS.Dal.Sql.Ctx;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PoS.BL.Service.Internal
 {

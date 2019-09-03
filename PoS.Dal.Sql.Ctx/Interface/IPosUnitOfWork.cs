@@ -1,11 +1,4 @@
-﻿using PoS.Dal.Sql.Ctx.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PoS.Dal.Sql.Ctx
+﻿namespace PoS.Dal.Sql.Ctx
 {
 	public interface IPosUnitOfWork
 	{

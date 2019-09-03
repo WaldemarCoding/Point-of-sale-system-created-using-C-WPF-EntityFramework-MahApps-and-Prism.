@@ -1,12 +1,7 @@
 ﻿using MahApps.Metro.IconPacks;
 using PoS.Ctrls;
 using PoS.Views;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PoS.ViewModels
 {

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PoS.Dal.Mdl
+﻿namespace PoS.Dal.Mdl
 {
 	/// <summary>
 	/// Gender Enumeration

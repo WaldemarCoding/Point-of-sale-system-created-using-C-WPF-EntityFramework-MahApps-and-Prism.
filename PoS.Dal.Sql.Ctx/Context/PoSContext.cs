@@ -1,14 +1,10 @@
-﻿using MySql.Data.Entity;
-using PoS.Dal.Mdl;
-using PoS.Dal.Sql.Ctx.Interface;
+﻿using PoS.Dal.Mdl;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PoS.Dal.Sql.Ctx.Context
 {
